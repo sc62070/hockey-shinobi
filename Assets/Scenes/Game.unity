@@ -1511,7 +1511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 892804665}
   m_Layer: 0
-  m_Name: AiBoundaryHolder
+  m_Name: PlayerRinneganBoundaryHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2072,7 +2072,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1713342397}
   m_Layer: 0
-  m_Name: PlayerBoundaryHolder
+  m_Name: PlayerUchihaBoundaryHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2251,9 +2251,10 @@ GameObject:
   - component: {fileID: 1814829749}
   - component: {fileID: 1814829748}
   - component: {fileID: 1814829747}
+  - component: {fileID: 1814829752}
   - component: {fileID: 1814829751}
   m_Layer: 0
-  m_Name: AiRinnegan
+  m_Name: PlayerRinnegan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2377,6 +2378,19 @@ MonoBehaviour:
   Puck: {fileID: 537824728}
   PlayerBoundaryHolder: {fileID: 892804665}
   PuckBoundaryHolder: {fileID: 679547033}
+--- !u!114 &1814829752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814829746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2186eabc23a514686aa7dc55018d08ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BoundaryHolder: {fileID: 892804665}
 --- !u!1 &1881559469
 GameObject:
   m_ObjectHideFlags: 0
