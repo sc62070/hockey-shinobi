@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour, IResetable {
 
     Rigidbody2D rb;
     Vector2 startingPosition;
@@ -31,10 +31,12 @@ public class PlayerMovement : MonoBehaviour {
     private void OnEnable()
     {
         Controller.Players.Add(this);
+        UiManager.Instance.ResetableGameObjects.Add(this);
     }
     private void OnDisable()
     {
         Controller.Players.Remove(this);
+        UiManager.Instance.ResetableGameObjects.Remove(this);
     }
 
     public void MoveToPosition(Vector2 position)

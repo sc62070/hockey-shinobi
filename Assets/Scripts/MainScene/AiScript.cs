@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AiScript : MonoBehaviour {
+public class AiScript : MonoBehaviour, IResetable {
 
     public float MaxMovementSpeed;
     private Rigidbody2D rb;
@@ -33,6 +33,8 @@ public class AiScript : MonoBehaviour {
                               PuckBoundaryHolder.GetChild(1).position.y,
                               PuckBoundaryHolder.GetChild(2).position.x,
                               PuckBoundaryHolder.GetChild(3).position.x);
+
+        UiManager.Instance.ResetableGameObjects.Add(this);
     }
 
     private void FixedUpdate()
