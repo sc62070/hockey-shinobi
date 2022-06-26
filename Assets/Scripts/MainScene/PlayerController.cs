@@ -5,9 +5,25 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public List<PlayerMovement> Players = new List<PlayerMovement>();
-	
-	// Update is called once per frame
-	void Update () {
+
+    public GameObject AiPlayer;
+
+    private void Start()
+    {
+        if (GameValues.IsMultiplayer)
+        {
+            AiPlayer.GetComponent<PlayerMovement>().enabled = true;
+            AiPlayer.GetComponent<AiScript>().enabled = false;
+        }
+        else
+        {
+            AiPlayer.GetComponent<PlayerMovement>().enabled = false;
+            AiPlayer.GetComponent<AiScript>().enabled = true;
+        }
+    }
+
+    // Update is called once per frame
+    void Update () {
 		for (int i = 0; i < Input.touchCount; i++)
         {
             Vector2 touchWorldPos = Camera.main.ScreenToWorldPoint(Input.GetTouch(i).position);
