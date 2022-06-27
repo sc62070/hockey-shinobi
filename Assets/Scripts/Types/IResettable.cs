@@ -1,4 +1,4 @@
-public interface IResetable
+public interface IResettable
 {
     void ResetPosition();
 }

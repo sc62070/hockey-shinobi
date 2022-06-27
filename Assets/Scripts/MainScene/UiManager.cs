@@ -25,7 +25,7 @@ public class UiManager : MonoBehaviour {
 
     public ScoreScript scoreScript;
 
-    public List<IResetable> ResetableGameObjects = new List<IResetable>();
+    public List<IResettable> ResetableGameObjects = new List<IResettable>();
 
     public void ShowRestartCanvas(bool didAiWin)
     {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PuckScript : MonoBehaviour, IResetable {
+public class PuckScript : MonoBehaviour, IResettable {
 
     public ScoreScript ScoreScriptInstance;
     public static bool WasGoal { get; private set; }

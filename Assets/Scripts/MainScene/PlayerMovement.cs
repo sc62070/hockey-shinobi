@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour, IResetable {
+public class PlayerMovement : MonoBehaviour, IResettable {
 
     Rigidbody2D rb;
     Vector2 startingPosition;
